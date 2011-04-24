@@ -1,0 +1,11 @@
+A test program that implements the Curses library using multiple threads.
+
+Currently separates the screen in half with a line, and prints whatever you type on the bottom screen to the top screen. Not very exciting really.
+
+You will have to press 'q' to quit the program, and 'Q' to backspace. Don't ask me why I implemented it like this.
+
+Multiple instances of this program can be opened. All other instances after the first one will only accept input. All input will go to the output screen of the first instance of this program.
+
+Note that one will need the curses library in order to properly make and run this program.
+
+Technically the output thread is separated from the input thread. The output thread receives a message from the input thread through a message queue.
