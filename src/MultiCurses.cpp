@@ -202,7 +202,7 @@ void HandleMasterInput(pthread_t hOutput, int msqid) {
 		while((d = getch()) != '\n') {
 			if (d == 'q' && !counter) {
 				// 3rd parameter is unnecessary
-				SetTextMsg(&msg, TYPE_QUIT, (windowtype)0, "", NULL);
+				SetTextMsg(&msg, TYPE_QUIT, (windowtype)0, (char*)&"", NULL);
 
 				if (SendMessage(msqid, &msg)) {
 					pthread_kill(hOutput, SIGINT);		
@@ -215,7 +215,7 @@ void HandleMasterInput(pthread_t hOutput, int msqid) {
 					continue;
 				}
 				
-				SetTextMsg(&msg, TYPE_MSG, WINDOW_INPUT, "", PROP_DEL);
+				SetTextMsg(&msg, TYPE_MSG, WINDOW_INPUT, (char*)&"", PROP_DEL);
 
 				if (SendMessage(msqid, &msg)) {
 					break;
