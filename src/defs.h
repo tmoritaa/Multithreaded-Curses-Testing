@@ -4,4 +4,4 @@
 #define DWORD unsigned int
 #define STRBUFFERSIZE 256
 
-#endif 
+#endif
