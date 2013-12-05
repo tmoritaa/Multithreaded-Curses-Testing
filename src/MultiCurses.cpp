@@ -124,7 +124,7 @@ void* outputProc(void* param)
      key_t key;
      int msqid;
 
-     key = ftok("MultiCurses.cpp", 'B');
+     key = ftok("./MultiCurses", 'B');
 
      if (key == -1) {
           perror("output key creation failed");
@@ -143,7 +143,7 @@ int InitializeConnections(pthread_t* hOutput, int* msqid)
 {
      key_t key;
 
-     key = ftok("MultiCurses.cpp", 'B');
+     key = ftok("MultiCurses", 'B');
 
      if (key == -1) {
           return 1;
