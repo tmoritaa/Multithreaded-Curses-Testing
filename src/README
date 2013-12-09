@@ -1,0 +1,5 @@
+you can build this the cmake way something like :
+rm -rvf build ; mkdir build ; cd build ; cmake .. ; make
+from the src folder
+debug build with:
+rm -rvf build ; mkdir build ; cd build ; cmake -DCMAKE_BUILD_TYPE:STRING=Debug .. ; make
